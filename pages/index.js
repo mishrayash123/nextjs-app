@@ -1,9 +1,25 @@
+import Link from "next/link"
 
-
-export default function Home() {
+export default function index() {
   return (
-    <div>
-      <h1>Hello </h1>
-    </div>
+    <nav>
+      <ul>
+        <li>
+        <Link href="/Home">
+          Home
+        </Link>
+        </li>
+        <li>
+        <Link href="/about">
+          About
+        </Link>
+        </li>
+        <li>
+        <Link href="/blog">
+          Blog
+        </Link>
+        </li>
+      </ul>
+    </nav>
   )
 }
