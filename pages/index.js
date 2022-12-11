@@ -1,4 +1,4 @@
-import Link from "next/link"
+import Navbar from "../Components/Navbar"
 import {useRouter} from "next/router"
 
 export default function index() {
@@ -7,26 +7,9 @@ export default function index() {
     router.push("/Home");
   }
   return (
-    <nav>
-      <ul>
-        <li>
-        <Link href="/Home">
-          Home
-        </Link>
-        </li>
-        <li>
-        <Link href="/about">
-          About
-        </Link>
-        </li>
-        <li>
-        <Link href="/blog">
-          Blog
-        </Link>
-        </li>
-      </ul>
-
-      <button onClick={handleInput}> Go To Home</button>
-    </nav>
+    <>
+    <Navbar />
+    <button onClick={handleInput}> Go To Home</button>
+    </>
   )
 }
