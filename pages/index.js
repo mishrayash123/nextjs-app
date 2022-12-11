@@ -1,6 +1,11 @@
 import Link from "next/link"
+import {useRouter} from "next/router"
 
 export default function index() {
+  const router = useRouter();
+  const handleInput = () =>{
+    router.push("/Home");
+  }
   return (
     <nav>
       <ul>
@@ -20,6 +25,8 @@ export default function index() {
         </Link>
         </li>
       </ul>
+
+      <button onClick={handleInput}> Go To Home</button>
     </nav>
   )
 }
